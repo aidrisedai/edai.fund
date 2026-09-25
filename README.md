@@ -2,7 +2,7 @@
 
 Coming-soon landing page for the **EdAI Fund**: a fund with a $100M target to back principled and ambitious teen founders.
 
-It's one static page (`index.html`) plus the official EdAI wordmarks in `assets/`. It needs no build step.
+It's one self-contained static page (`index.html`); the EdAI mark is inlined as SVG, and a standalone copy lives in `assets/edai-mark.svg`. It needs no build step.
 
 ## Preview locally
 
