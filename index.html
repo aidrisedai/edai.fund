@@ -81,6 +81,9 @@
     margin: 0; max-width: 16ch;
   }
   h1 em { font-style: italic; color: var(--emerald-deep); }
+  .ast { color: var(--emerald-deep); text-decoration: none; font-size: .55em; vertical-align: super; line-height: 0; margin-left: .04em; }
+  .footnote { margin: 14px 0 0; font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--ink-3); }
+  .footnote span { color: var(--emerald-deep); font-style: normal; }
   .lede {
     margin: clamp(28px, 3.5vw, 40px) 0 0;
     max-width: 36rem;
@@ -224,6 +227,8 @@
   .foot-row a:hover { color: #fff; }
   .foot-links { display: flex; flex-wrap: wrap; gap: 8px 28px; }
   .tagline { margin: 44px 0 0; text-align: center; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+  .tagline .ast { color: var(--emerald); font-size: 1em; vertical-align: baseline; line-height: inherit; margin-left: .02em; }
+  .tagline-note { margin: 8px 0 0; text-align: center; font-family: var(--serif); font-style: italic; font-size: 13px; color: rgba(255,255,255,.45); }
 
   /* ---------- Motion ---------- */
   .reveal { opacity: 0; transform: translateY(14px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
@@ -269,8 +274,9 @@
   <section class="hero" id="join">
     <div class="wrap">
       <p class="eyebrow reveal">The EdAI Fund · $100M target</p>
-      <h1 class="reveal">Funding principled and <em>ambitious</em> teen founders.</h1>
+      <h1 class="reveal">Funding principled<a class="ast" href="#principled-note" aria-describedby="principled-note">*</a> and <em>ambitious</em> teen founders.</h1>
       <p class="lede reveal">We’re raising a fund with a $100 million target for teen founders who are ready to turn ideas into products people will pay for. Join the list to follow along as we build it.</p>
+      <p class="footnote reveal" id="principled-note"><span>*</span> Principled: guided by Islamic values and principles.</p>
 
       <div class="reveal">
         <form class="signup" id="signup" name="edai-fund-waitlist" method="POST" data-netlify="true" netlify-honeypot="company" novalidate>
@@ -388,7 +394,8 @@
         <span>© <span id="yr">2026</span> EdAI</span>
       </div>
     </div>
-    <p class="tagline">Raising Principled and Ambitious Teen Builders and Founders</p>
+    <p class="tagline">Raising Principled<span class="ast">*</span> and Ambitious Teen Builders and Founders</p>
+    <p class="tagline-note">*Guided by Islamic values and principles</p>
   </div>
 </footer>
 
